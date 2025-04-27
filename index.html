@@ -138,7 +138,12 @@
             <p>
             <img src="./static/images/bym.jpg">
             <p>
-              BYOS first builds the OD-KG by integrating Kconfig and the corpus, then extracts and aligns entities from the user goal to infer key configuration options.           
+               An overview of our BYOS framework. First, we construct the OD-KG by integrating the contents of Kconfig and the corpus
+              (steps 1 and 2). When the user specifies an optimization goal, the LLM performs entity extraction and entity alignment on the goal (step
+              3). The aligned entities are then reasoned over the graph, resulting in the identification of several pivot configuration options (step 4).
+              These pivot configuration options are dynamically expanded within the configuration space (step 5). During this dynamic expansion,
+              values are assigned to the configuration items, allowing the expanded configuration space to be directly exported as a fully assigned Linux
+              configuration file (step 6). This configuration file can subsequently be used to compile and run the Linux kernel (steps 7 and 8).          
         </div>
       </div>
       <!--/ Overview. -->
